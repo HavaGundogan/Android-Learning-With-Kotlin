@@ -79,6 +79,84 @@ println(fullname)
 
         println(input.toInt()*5)
 
+        //Collections
+        //Arrays
+
+        println("------------Arrays-------")
+        val myArray = arrayOf("James","kİrk","Larce")
+        //index
+        println(myArray[0])
+        myArray[0]="hava"
+        println("yeni değer "+myArray[0])
+        myArray.get(0)
+        myArray.set(1,"Ayse")
+        println(myArray[1])
+
+        // myArray[4]="atıl"  //bu eklenmedi sebebi array oluştuğunda boyutu belirlenmiş olur.
+       // println(myArray[4])
+
+        //boyut sorunuyla karşılaşmamak için listeler kullanılır.
+
+        val myNewArray = doubleArrayOf(1.0,2.0,3.0)
+        val mixedArray= arrayOf("hava",2,5)
+        println(mixedArray[0])
+
+        //list array list
+
+        println("------------Array List ---------")
+
+        val musician= arrayListOf<String>("hava","ayse")
+        musician.add("betul")
+        println(musician[2])
+
+        val myMixedArrayList=ArrayList<Any>()
+        myMixedArrayList.add("hava")
+        myMixedArrayList.add(2)
+        println(myMixedArrayList[0])
+
+        //set
+        println("--------------Set-----------")
+
+        val myExampleArray= arrayOf(1,1,2,30,4)
+        println("element 1 : ${myExampleArray[0]}")
+        println("element 2: ${myExampleArray[1]}")
+
+        val mySet = setOf<Int>(1,1,2,3)
+        println(mySet.size) // set lerde aynı eleman iki kere bulunamaz onu bir kere sayar.
+
+
+        //For Each
+
+        mySet.forEach{ println(it) } //lambda gösterimi bu
+
+        val myStringSet =HashSet<String>()
+        myStringSet.add("hava")
+        myStringSet.add("hava")
+        myStringSet.add("recep")
+        println(myStringSet.size)
+
+        //map - hashmap
+        println("------------map----------")
+        //dizileri veya verileri birbiri ile eşleştirmeyi sağlar key-value
+
+        val fruitArray = arrayOf("Apple","Banana")
+        val caloriesArray= arrayOf(100,200)
+        println("${fruitArray[0]} : ${caloriesArray[0]}")
+
+
+        val fruitCalorieMap = hashMapOf<String,Int>()
+        fruitCalorieMap.put("apple",100)
+        fruitCalorieMap.put("banana",200)
+        println(fruitCalorieMap["apple"])
+        //veriler genelde bu formatta çekilip kaydedilir.
+
+        val myNewMap= hashMapOf<String,Int>("a" to 1,"b" to 4, "c" to 7)
+        println(myNewMap["a"])
+
+        //operatörler
+        // <,>,||,&&,==-
+
+
 
 
 
