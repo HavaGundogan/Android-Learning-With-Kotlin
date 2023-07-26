@@ -156,6 +156,81 @@ println(fullname)
         //operatörler
         // <,>,||,&&,==-
 
+        //if kontrolü
+        println("---------------if control------------")
+        val myNumberAge= 32;
+        if (myNumberAge<30){
+            println("< 30")
+        }else
+        {
+            println(">30")
+        }
+
+        //switch   / when
+
+        println("-------------switch/when------------")
+        val day=3;
+        var dayString=""
+        if (day==1){
+println("")
+        }
+        when(day){
+          1->  dayString="monday"
+            1->  dayString="tuesday"
+            1->  dayString="wednesday"
+            else ->  dayString=""
+        }
+        //loops
+        //for loop
+        println("---------for loop------------")
+        val myArrayofNumbers = arrayOf(12,21,30,42,51,63,72,81)
+
+        val myField =myArrayofNumbers[0]/3*5
+        println(myField)
+
+        for(number in myArrayofNumbers){
+
+            val z =number/3*5
+            println(z)
+        } //döngünün gücü
+
+        for (i in myArrayofNumbers.indices){//indis geziyor
+          val y=  myArrayofNumbers[i]/3*5
+            println(y)
+        }
+
+        for (b in 0..9)
+        {
+            println(b)
+        }
+
+        val myStringArraylist =ArrayList<String>()
+        myStringArraylist.add("hava")
+        myStringArraylist.add("gundogan")
+        myStringArraylist.add("recep")
+        myStringArraylist.add("gundogam")
+
+        for (str in myStringArraylist){
+            println(str)
+        }
+
+        //while loop
+
+        println("---------while loop-------------")
+
+
+        var i =0
+        while(i<10){
+            println(i)
+            i=i+1
+
+        }
+
+
+
+
+
+
 
 
 
