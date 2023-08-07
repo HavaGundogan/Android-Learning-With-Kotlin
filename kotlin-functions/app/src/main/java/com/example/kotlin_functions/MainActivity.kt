@@ -15,6 +15,8 @@ import com.example.kotlin_functions.ui.theme.KotlinFunctionsTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mySum("hava",6)
+        multiply(5,9)
         setContent {
             KotlinFunctionsTheme {
                 // A surface container using the 'background' color from the theme
@@ -24,6 +26,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Greeting("Android")
                 }
+
             }
         }
     }
@@ -43,4 +46,11 @@ fun GreetingPreview() {
     KotlinFunctionsTheme {
         Greeting("Android")
     }
+}
+fun mySum(a:String, b:Int){
+    println(a +" new function "+ b)
+}
+fun  multiply(a:Int,b:Int):Int{
+    // println(a*b)
+    return a*b
 }
