@@ -7,15 +7,39 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="288dp"
-        android:layout_height="62dp"
-        android:text="TextView" />
+        android:layout_width="match_parent"
+        android:layout_height="163dp"
+        android:hint="result:" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="290dp"
-        android:layout_height="114dp"
+        android:layout_width="match_parent"
+        android:layout_height="208dp"
         android:onClick="buttononclick"
-        android:text="Button" />
+        android:text="Make Simpson" />
+
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/jobText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="job"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/ageTe3xt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="age"
+        android:inputType="text" />
 
 </LinearLayout>

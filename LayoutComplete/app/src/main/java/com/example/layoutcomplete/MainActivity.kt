@@ -22,10 +22,8 @@ class MainActivity : ComponentActivity() {
 
 
         myTextView=findViewById(R.id.textView)
-        val homer =Simpson()
-        homer.name= "Homer Simpson"
-        homer.age= 50
-        homer.job= "Nucleer"
+
+
 
 
     }
