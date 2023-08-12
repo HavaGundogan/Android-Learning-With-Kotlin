@@ -2,26 +2,28 @@ package com.example.layoutcomplete
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.layoutcomplete.ui.theme.LayoutCompleteTheme
 
 class MainActivity : ComponentActivity() {
-    lateinit var myTextView:TextView
+    private lateinit var myTextView:TextView
+    private lateinit var button: Button
+    private lateinit var nameText: EditText
+    private lateinit var ageText: EditText
+    private lateinit var jobText: EditText
+    var name=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)//bunu nasıl unuttum?
 
 
         myTextView=findViewById(R.id.textView)
+        button=findViewById(R.id.button)
+        nameText=findViewById(R.id.nameText)
+        ageText=findViewById(R.id.ageTe3xt)
+        jobText=findViewById(R.id.jobText)
 
 
 
@@ -29,6 +31,20 @@ class MainActivity : ComponentActivity() {
     }
 
     fun buttononclick(view: View){
-        myTextView.text="Button clicked"
+        //scope = kapsam, kendi içinde bulunduğu kod bloğunda geçerli.
+        name=nameText.text.toString()
+        val age=ageText.text.toString().toIntOrNull()
+        val job=jobText.text.toString()
+
+
+        if (age != null){
+            val simpson=Simpson(name,age!!,job)
+            myTextView.text = "Name: ${simpson.name}  Age: ${simpson.age} Job: ${simpson.job}"
+        }else
+        {
+            myTextView.text= "Enter your age!"
+        }
+
     }
+
 }
