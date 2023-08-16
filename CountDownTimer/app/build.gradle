@@ -5,12 +5,16 @@ plugins {
 
 android {
     namespace 'com.gundogan.countdowntimer'
-    compileSdk 33
+    compileSdk 34
+
+    buildFeatures {
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId "com.gundogan.countdowntimer"
         minSdk 23
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
