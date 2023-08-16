@@ -34,6 +34,7 @@ class MainActivity : ComponentActivity() {
         val intent =Intent(this@MainActivity,NextActivity::class.java)
         intent.putExtra("name",binding.editText1.text.toString())
         startActivity(intent)
+        finish()// activity i kapat. geri gelecek yer bırakmaz direkt sayfayı kapatmış olur.
     }
     }
 
